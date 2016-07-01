@@ -1,5 +1,7 @@
 package com.dayeong.gdgssu_fork;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,24 +16,22 @@ import java.util.ArrayList;
  */
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
     private ArrayList<String> mDataset;
+    Context context;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
         public CardView mCardView;
-        public TextView mNumber;
+        public TextView mTitle;
 
         public ViewHolder(View v) {
             super(v);
             mCardView = (CardView) v.findViewById(R.id.card);
-            mNumber = (TextView)v.findViewById(R.id.number);
+            mTitle = (TextView) v.findViewById(R.id.cv_title);
         }
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public RecipeAdapter(ArrayList<String> myDataset) {
+    public RecipeAdapter(Context context, ArrayList<String> myDataset) {
+        this.context = context;
         mDataset = myDataset;
     }
 
@@ -51,9 +51,20 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        final int pos = position;
         String recipe = mDataset.get(position);
-        holder.mNumber.setText(recipe);
+        holder.mTitle.setText(recipe);
+
+        holder.mCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, NextActivity.class);
+                intent.putExtra("title", mDataset.get(pos));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
