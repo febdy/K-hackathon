@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7ff334cdf7dfe9b38b484b94140ce81ace75b52c">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b01d88afc11c164264cc81cd78dae529d2ea6a0e.jar" />
+    </item>
+
+</items>
