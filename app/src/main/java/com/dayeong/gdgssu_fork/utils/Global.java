@@ -26,4 +26,8 @@ public class Global {
     public static final String ID = "id";
     public static final String PW = "pw";
     public static final String EMAIL = "email";
+
+
+    // intent key
+    public static final String USER = "user";
 }

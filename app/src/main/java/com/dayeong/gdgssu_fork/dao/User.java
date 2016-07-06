@@ -3,10 +3,12 @@ package com.dayeong.gdgssu_fork.dao;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.loopj.android.http.RequestParams;
 
+import java.io.Serializable;
+
 /**
  * Created by IronFactory on 2016. 7. 4..
  */
-public class User {
+public class User implements Serializable {
     private String id;
     private String pw;
     private String email;

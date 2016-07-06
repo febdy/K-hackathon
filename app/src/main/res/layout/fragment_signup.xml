@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_signup_container"
+    android:layout_margin="@dimen/activity_vertical_margin"
     tools:context="com.dayeong.gdgssu_fork.signup.SignupFragment">
 
 

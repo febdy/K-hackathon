@@ -1,16 +1,20 @@
 package com.dayeong.gdgssu_fork.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.dayeong.gdgssu_fork.MainActivity;
 import com.dayeong.gdgssu_fork.R;
 import com.dayeong.gdgssu_fork.dao.User;
 import com.dayeong.gdgssu_fork.signup.SignupFragment;
+import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
 
 /**
@@ -71,7 +75,11 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
 
     @Override
     public void loginSuccess(User user) {
-
+        Log.d(TAG, "로그인 성공");
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        intent.putExtra(Global.USER, user);
+        startActivity(intent);
+        getActivity().finish();
     }
 
 

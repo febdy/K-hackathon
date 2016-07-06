@@ -23,19 +23,19 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
 
     @Override
     public void login(String id, String pw) {
-        User user = new User(id, pw);
+        final User user = new User(id, pw);
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.post(Global.LOGIN_URL, user.getRequestParams(), new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 Log.d(TAG, "로그인 성공");
+                loginView.loginSuccess(user);
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 Log.d(TAG, "로그인 실패");
-
             }
         });
     }
