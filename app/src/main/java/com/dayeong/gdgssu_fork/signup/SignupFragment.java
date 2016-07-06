@@ -12,9 +12,9 @@ import android.widget.EditText;
 
 import com.dayeong.gdgssu_fork.R;
 import com.dayeong.gdgssu_fork.dao.User;
-import com.dayeong.gdgssu_fork.network.HttpManager;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
+import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import cz.msebera.android.httpclient.Header;
@@ -108,7 +108,8 @@ public class SignupFragment extends BaseFragment implements SignupContract.View 
     @Override
     public void signUp(User user) {
         showDialog(getString(R.string.action_signup), getString(R.string.prompt_wait));
-        HttpManager.signup(user, new AsyncHttpResponseHandler() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.post(Global.SIGNUP_URL, user.getRequestParams(), new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 Log.d(TAG, "회원가입 성공");

@@ -2,10 +2,10 @@ package com.dayeong.gdgssu_fork.login;
 
 import android.util.Log;
 
+import com.dayeong.gdgssu_fork.dao.User;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -23,21 +23,19 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
 
     @Override
     public void login(String id, String pw) {
-//        User user = new User(id, pw);
+        User user = new User(id, pw);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        RequestParams params = new RequestParams();
-        params.add("id", "id");
-        params.add("pw", "pw");
-        client.post(Global.SERVER_URL + "/login", params, new AsyncHttpResponseHandler() {
+        client.post(Global.LOGIN_URL, user.getRequestParams(), new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                Log.d(TAG, "success");
+                Log.d(TAG, "로그인 성공");
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                Log.d(TAG, "fail");
+                Log.d(TAG, "로그인 실패");
+
             }
         });
     }

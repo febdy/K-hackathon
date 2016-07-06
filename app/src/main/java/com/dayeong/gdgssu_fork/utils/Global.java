@@ -7,6 +7,7 @@ public class Global {
 
     public static final String SERVER_URL = "http://k-hack-server.herokuapp.com";
     public static final String SIGNUP_URL = SERVER_URL + "/signup";
+    public static final String LOGIN_URL = SERVER_URL + "/login";
 
 
     public static final int ERR_EMPTY_ID = 0;
