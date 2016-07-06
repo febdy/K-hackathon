@@ -30,4 +30,8 @@ public class Global {
 
     // intent key
     public static final String USER = "user";
+    public static final String TIMER = "timer";
+
+    // db key
+    public static final String SIMPLE_TIMER_DB = "simpleTimer";
 }
