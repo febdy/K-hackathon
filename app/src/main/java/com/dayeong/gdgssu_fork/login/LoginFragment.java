@@ -2,6 +2,7 @@ package com.dayeong.gdgssu_fork.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -82,6 +83,10 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
         getActivity().finish();
     }
 
+    @Override
+    public void loginFail() {
+        Snackbar.make(this.getView(), "로그인 실패", Snackbar.LENGTH_SHORT).show();
+    }
 
     @Override
     public void signup() {

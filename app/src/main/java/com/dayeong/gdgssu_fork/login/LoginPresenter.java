@@ -36,6 +36,7 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 Log.d(TAG, "로그인 실패");
+                loginView.loginFail();
             }
         });
     }

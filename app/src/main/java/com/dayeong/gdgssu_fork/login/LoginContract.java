@@ -10,6 +10,8 @@ public interface LoginContract {
     interface View {
         void loginSuccess(User user);
 
+        void loginFail();
+
         void signup();
     }
 
