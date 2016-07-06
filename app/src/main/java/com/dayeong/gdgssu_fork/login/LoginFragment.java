@@ -2,7 +2,6 @@ package com.dayeong.gdgssu_fork.login;
 
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +11,14 @@ import android.widget.EditText;
 import com.dayeong.gdgssu_fork.R;
 import com.dayeong.gdgssu_fork.dao.User;
 import com.dayeong.gdgssu_fork.signup.SignupFragment;
+import com.dayeong.gdgssu_fork.views.BaseFragment;
 
 /**
 * 로그인
 * */
-public class LoginFragment extends Fragment implements LoginContract.View {
+public class LoginFragment extends BaseFragment implements LoginContract.View {
+
+    private static final String TAG = "LoginFragment";
 
     private EditText idInput;
     private EditText pwInput;
@@ -38,7 +40,8 @@ public class LoginFragment extends Fragment implements LoginContract.View {
         return view;
     }
 
-    private void init(View view) {
+    @Override
+    protected void init(View view) {
         listener = new LoginPresenter(this);
 
         idInput = (TextInputEditText) view.findViewById(R.id.fragment_login_id);
@@ -75,7 +78,8 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     @Override
     public void signup() {
         getActivity().getSupportFragmentManager().beginTransaction()
-                .add(R.id.activity_login_container, new SignupFragment())
+                .replace(R.id.activity_login_container, new SignupFragment())
+                .addToBackStack(null)
                 .commit();
     }
 }

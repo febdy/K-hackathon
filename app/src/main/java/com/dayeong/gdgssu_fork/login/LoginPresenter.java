@@ -2,8 +2,7 @@ package com.dayeong.gdgssu_fork.login;
 
 import android.util.Log;
 
-import com.dayeong.gdgssu_fork.Global;
-import com.dayeong.gdgssu_fork.dao.User;
+import com.dayeong.gdgssu_fork.utils.Global;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -24,7 +23,7 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
 
     @Override
     public void login(String id, String pw) {
-        User user = new User(id, pw);
+//        User user = new User(id, pw);
 
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();

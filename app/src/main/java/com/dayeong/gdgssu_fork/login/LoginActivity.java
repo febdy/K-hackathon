@@ -2,7 +2,7 @@ package com.dayeong.gdgssu_fork.login;
 
 import android.os.Bundle;
 
-import com.dayeong.gdgssu_fork.BaseActivity;
+import com.dayeong.gdgssu_fork.views.BaseActivity;
 import com.dayeong.gdgssu_fork.R;
 
 public class LoginActivity extends BaseActivity {
