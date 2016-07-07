@@ -49,9 +49,8 @@ public class CircleTimer extends RelativeLayout {
                         public void run() {
                             setTimeText(currentTime);
                             progressBar.setProgress(currentTime++);
-                            if (currentTime == maxTime) {
+                            if (currentTime == maxTime)
                                 listener.completeTimer();
-                            }
                         }
                     });
                 }
@@ -90,11 +89,8 @@ public class CircleTimer extends RelativeLayout {
         progressBar = (ProgressBar) findViewById(R.id.circle_timer_bar);
 
         setListener();
-        listener = (OnTimerListener) context;
-    }
-
-    public void startTimer() {
         timerThread.start();
+        listener = (OnTimerListener) context;
     }
 
     public void setTitle(String title) {

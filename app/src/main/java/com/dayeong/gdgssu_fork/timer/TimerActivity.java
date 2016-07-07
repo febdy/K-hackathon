@@ -21,7 +21,7 @@ public class TimerActivity extends BaseActivity implements CircleTimer.OnTimerLi
 
         timer = (Timer) getIntent().getSerializableExtra(Global.TIMER);
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.activity_timer_container, TimerFragment.newInstance(timer, 0))
+                .add(R.id.activity_timer_container, TimerFragment.newInstance(timer))
                 .commit();
     }
 

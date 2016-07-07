@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.dayeong.gdgssu_fork.dao.Timer;
 import com.dayeong.gdgssu_fork.timer.TimerFragment;
 
 /**
@@ -36,10 +35,13 @@ public class PageFragment extends Fragment{
         super.onCreate(savedInstanceState);
         mPageNumber = getArguments().getInt("page");
 
-        mTimerFragment = TimerFragment.newInstance(new Timer("dd", 10), mPageNumber);
+        mTimerFragment = new TimerFragment();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.attach(mTimerFragment);
         transaction.commit();
+
+
+
     }
 
     @Override
@@ -50,4 +52,5 @@ public class PageFragment extends Fragment{
 
         return rootView;
     }
+
 }

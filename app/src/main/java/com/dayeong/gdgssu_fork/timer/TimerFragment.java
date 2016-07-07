@@ -2,7 +2,6 @@ package com.dayeong.gdgssu_fork.timer;
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,21 +17,17 @@ import com.dayeong.gdgssu_fork.views.CircleTimer;
  */
 public class TimerFragment extends BaseFragment {
 
-    private static final String TAG = "TIME_FRAGMENT";
     private Timer timer;
     private CircleTimer circleTimerView;
-
-    private int position;
 
     public TimerFragment() {
         // Required empty public constructor
     }
 
-    public static TimerFragment newInstance(Timer timer, int position) {
+    public static TimerFragment newInstance(Timer timer) {
         TimerFragment fragment = new TimerFragment();
         Bundle args = new Bundle();
         args.putSerializable(Global.TIMER, timer);
-        args.putInt("position", position);
         fragment.setArguments(args);
         return fragment;
     }
@@ -42,7 +37,6 @@ public class TimerFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             timer = (Timer) getArguments().getSerializable(Global.TIMER);
-            position = getArguments().getInt("position");
         }
     }
 
@@ -61,11 +55,5 @@ public class TimerFragment extends BaseFragment {
         circleTimerView = (CircleTimer) view.findViewById(R.id.fragment_timer_circle_timer);
         circleTimerView.setMaxTime(10);
         circleTimerView.setCurrentTime(0);
-    }
-
-    public void startTimer(int position) {
-        Log.d(TAG, "start");
-        if (position == this.position)
-            circleTimerView.startTimer();
     }
 }
