@@ -4,38 +4,37 @@ package com.dayeong.gdgssu_fork.dao;
  * Created by IronFactory on 2016. 7. 7..
  */
 public class Recipe {
+    private int id;
+    private int step;
+    private String action;
 
-    private String content;
-    private String comment;
-    private Timer timer;
-
-    public Recipe(String content, String comment, Timer timer) {
-        this.content = content;
-        this.comment = comment;
-        this.timer = timer;
+    public Recipe(int id, int step, String action) {
+        this.id = id;
+        this.step = step;
+        this.action = action;
     }
 
-    public String getContent() {
-        return content;
+    public int getId() {
+        return id;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getComment() {
-        return comment;
+    public int getStep() {
+        return step;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setStep(int step) {
+        this.step = step;
     }
 
-    public Timer getTimer() {
-        return timer;
+    public String getAction() {
+        return action;
     }
 
-    public void setTimer(Timer timer) {
-        this.timer = timer;
+    public void setAction(String action) {
+        this.action = action;
     }
 }
