@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by IronFactory on 2016. 7. 7..
  */
-public class Timer extends RecipeGeneral implements Serializable {
+public class Timer implements Serializable {
 
     private String name;
     private long time;

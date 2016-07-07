@@ -11,4 +11,6 @@
     <dimen name="circleProgressThickness">7dp</dimen>
 
     <dimen name="timer_button_margin">60dp</dimen>
+
+    <dimen name="action_min_height">200dp</dimen>
 </resources>

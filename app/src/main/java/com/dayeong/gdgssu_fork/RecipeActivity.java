@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class RecipeActivity extends AppCompatActivity {
-    //
+import com.dayeong.gdgssu_fork.utils.Global;
 
-    TextView tv_title;
-    String title;
+public class RecipeActivity extends AppCompatActivity {
+
+    private TextView tv_title;
+    private String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,6 @@ public class RecipeActivity extends AppCompatActivity {
 
     public void receiveIntentData() {
         Intent intent = getIntent();
-        title = intent.getStringExtra("title");
+        title = intent.getStringExtra(Global.TITLE);
     }
 }
