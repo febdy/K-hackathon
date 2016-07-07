@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 
 import com.dayeong.gdgssu_fork.R;
 import com.dayeong.gdgssu_fork.dao.Timer;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
+import com.dayeong.gdgssu_fork.views.CircleTimer;
 
 /**
  * 타이머
@@ -18,7 +18,7 @@ import com.dayeong.gdgssu_fork.views.BaseFragment;
 public class TimerFragment extends BaseFragment {
 
     private Timer timer;
-
+    private CircleTimer circleTimerView;
 
     public TimerFragment() {
         // Required empty public constructor
@@ -52,7 +52,8 @@ public class TimerFragment extends BaseFragment {
 
     @Override
     protected void init(View view) {
-        ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.fragment_timer_circle_progress_bar);
-        progressBar.setProgress(65);
+        circleTimerView = (CircleTimer) view.findViewById(R.id.fragment_timer_circle_timer);
+        circleTimerView.setMaxTime((int) timer.getTime());
+        circleTimerView.setCurrentTime(0);
     }
 }

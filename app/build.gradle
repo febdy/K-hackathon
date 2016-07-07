@@ -30,4 +30,5 @@ dependencies {
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.android.support:support-v4:24.0.0'
     compile 'com.afollestad.material-dialogs:core:0.8.6.1'
+    compile 'com.github.CardinalNow:Android-CircleProgressIndicator:v0.2'
 }

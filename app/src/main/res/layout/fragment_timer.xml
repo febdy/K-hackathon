@@ -4,15 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.dayeong.gdgssu_fork.timer.TimerFragment">
 
-    <ProgressBar
-        android:id="@+id/fragment_timer_circle_progress_bar"
-        style="?android:attr/progressBarStyleHorizontal"
+    <com.dayeong.gdgssu_fork.views.CircleTimer
+        android:id="@+id/fragment_timer_circle_timer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:max="100"
-        android:rotation="-90"
-        android:indeterminate="false"
-        android:progressDrawable="@drawable/circle_progress_foreground" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

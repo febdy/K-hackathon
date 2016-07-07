@@ -35,7 +35,8 @@
 
     <string name="fail_to_sign_up">회원가입에 실패했습니다.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_start">시작</string>
+    <string name="btn_stop">정지</string>
+    <string name="btn_reset">초기화</string>
 
 </resources>
