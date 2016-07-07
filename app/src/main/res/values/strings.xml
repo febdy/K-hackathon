@@ -41,6 +41,7 @@
     <string name="btn_stop">정지</string>
     <string name="btn_reset">초기화</string>
 
+<<<<<<< HEAD
     <string name="prompt_ingredient">재료</string>
     <string name="prompt_ingredient_amount">재료의 양</string>
     <string name="prompt_time">시간</string>
@@ -49,5 +50,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+>>>>>>> dy-navigation-drawer
 
 </resources>

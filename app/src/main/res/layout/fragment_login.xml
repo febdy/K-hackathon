@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_margin="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.dayeong.gdgssu_fork.login.LoginFragment">
 
     <android.support.design.widget.TextInputLayout
@@ -14,7 +14,7 @@
             android:id="@+id/fragment_login_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_id"/>
+            android:hint="@string/prompt_id" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -26,8 +26,8 @@
             android:id="@+id/fragment_login_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/prompt_pw"/>
+            android:hint="@string/prompt_pw"
+            android:inputType="textPassword" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -36,13 +36,13 @@
         android:id="@+id/fragment_login_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/action_submit"/>
+        android:text="@string/action_submit" />
 
 
     <Button
         android:id="@+id/fragment_login_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/action_signup"/>
+        android:text="@string/action_signup" />
 
 </LinearLayout>

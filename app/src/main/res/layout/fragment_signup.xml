@@ -1,8 +1,9 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_signup_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_signup_container"
+    android:layout_margin="@dimen/activity_vertical_margin"
     tools:context="com.dayeong.gdgssu_fork.signup.SignupFragment">
 
 
@@ -20,7 +21,7 @@
                 android:id="@+id/fragment_signup_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_id"/>
+                android:hint="@string/prompt_id" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -32,8 +33,8 @@
                 android:id="@+id/fragment_signup_pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/prompt_pw"/>
+                android:hint="@string/prompt_pw"
+                android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -45,8 +46,8 @@
                 android:id="@+id/fragment_signup_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/prompt_confirm"/>
+                android:hint="@string/prompt_confirm"
+                android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -58,8 +59,8 @@
                 android:id="@+id/fragment_signup_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="@string/prompt_email"/>
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -68,7 +69,7 @@
             android:id="@+id/fragment_signup_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/action_submit"/>
+            android:text="@string/action_submit" />
 
     </LinearLayout>
 

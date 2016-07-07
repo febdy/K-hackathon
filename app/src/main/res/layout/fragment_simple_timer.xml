@@ -10,6 +10,6 @@
         android:id="@+id/fragment_simple_timer_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3"/>
+        android:numColumns="3" />
 
 </LinearLayout>
