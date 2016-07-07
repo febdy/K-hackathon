@@ -2,19 +2,24 @@ package com.dayeong.gdgssu_fork;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.dayeong.gdgssu_fork.views.CircleTimer;
+import com.dayeong.gdgssu_fork.timer.TimerFragment;
 
 /**
  * Created by Hyemingway on 2016. 7. 4..
  */
-public class PageFragment extends Fragment implements CircleTimer.OnTimerListener{
+public class PageFragment extends Fragment{
 
+    private static final String TAG = "PAGE_FRAGMENT";
     private int mPageNumber;
+
+    private TimerFragment mTimerFragment;
+
 
     public static PageFragment create(int pageNumber) {
         PageFragment fragment = new PageFragment();
@@ -29,19 +34,23 @@ public class PageFragment extends Fragment implements CircleTimer.OnTimerListene
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPageNumber = getArguments().getInt("page");
+
+        mTimerFragment = new TimerFragment();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.attach(mTimerFragment);
+        transaction.commit();
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_page, container, false);
-        ((TextView) rootView.findViewById(R.id.number)).setText("no."+mPageNumber);
+        ((TextView) rootView.findViewById(R.id.recipe_contents)).setText("no." + mPageNumber);
 
         return rootView;
     }
 
-    @Override
-    public void completeTimer() {
-        // next fragment 이동.
-    }
 }

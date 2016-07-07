@@ -6,13 +6,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.badoualy.stepperindicator.StepperIndicator;
+import com.dayeong.gdgssu_fork.dao.Timer;
+import com.dayeong.gdgssu_fork.timer.TimerFragment;
 import com.dayeong.gdgssu_fork.utils.Global;
+import com.dayeong.gdgssu_fork.views.CircleTimer;
 
-public class RecipeActivity extends FragmentActivity {
+public class RecipeActivity extends FragmentActivity implements CircleTimer.OnTimerListener{
+    private static final String TAG = "RECIPE_ACTIVITY";
+    private static final int NUM_PAGES = 5;
     //
     private TextView tv_title;
     private String title;
@@ -21,6 +28,9 @@ public class RecipeActivity extends FragmentActivity {
     private PagerAdapter mPagerAdapter;
     private StepperIndicator indicator;
 
+    private int recipeTime;
+    private String recipeContents;
+    private int recipeContentsNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +47,28 @@ public class RecipeActivity extends FragmentActivity {
 
         indicator.setViewPager(mViewPager);
 
-        indicator.setStepCount(5);
-//        indicator.setCurrentStep(2);
+        indicator.setStepCount(NUM_PAGES);
+
+
 
         receiveIntentData();
-        tv_title.setText(title);
+        tv_title.setText(title);    //재료를 title로로
 
 
+   }
+
+
+    @Override
+    public void completeTimer() {
+        Log.d(TAG, "timer complete");
+        int currentIdx = mViewPager.getCurrentItem();
+
+        if (currentIdx < NUM_PAGES) {
+            mViewPager.setCurrentItem(currentIdx);
+
+        }
+        // next fragment 이동.
     }
-
     private class PagerAdapter extends FragmentStatePagerAdapter {
 
         public PagerAdapter(FragmentManager fm) {
