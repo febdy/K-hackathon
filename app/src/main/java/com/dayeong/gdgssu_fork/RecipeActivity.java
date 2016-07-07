@@ -6,13 +6,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.badoualy.stepperindicator.StepperIndicator;
-import com.dayeong.gdgssu_fork.dao.Timer;
 import com.dayeong.gdgssu_fork.timer.TimerFragment;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.CircleTimer;
@@ -42,7 +40,25 @@ public class RecipeActivity extends FragmentActivity implements CircleTimer.OnTi
         indicator = (StepperIndicator) findViewById(R.id.indicator);
 
         mPagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        mViewPager.setOffscreenPageLimit(0);
         mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                PageFragment fragment = (PageFragment) mPagerAdapter.getItem(position);
+                fragment.startTimer(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         indicator.setViewPager(mViewPager);
         indicator.setStepCount(NUM_PAGES);
