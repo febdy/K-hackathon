@@ -38,14 +38,17 @@ public class CircleTimer extends RelativeLayout {
         @Override
         public void run() {
             try {
-                while (isRun && currentTime < maxTime) {
+                while (true) {
+                    Thread.sleep(1000);
+                    if (!isRun || currentTime >= maxTime)
+                        continue;
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            setCurrentTime(currentTime++);
+                            setTimeText(currentTime);
+                            progressBar.setProgress(currentTime++);
                         }
                     });
-                    Thread.sleep(1000);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -96,6 +99,10 @@ public class CircleTimer extends RelativeLayout {
     public void setCurrentTime(int time) {
         currentTime = time;
         progressBar.setProgress(time);
+        setTimeText(time);
+    }
+
+    private void setTimeText(int time) {
         StringBuilder sb = new StringBuilder();
         int temp;
         if ((temp = time / 60) > 0) {
