@@ -44,15 +44,12 @@ public class RecipeActivity extends FragmentActivity implements CircleTimer.OnTi
         mPagerAdapter = new PagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
 
-
         indicator.setViewPager(mViewPager);
-
         indicator.setStepCount(NUM_PAGES);
 
-
-
         receiveIntentData();
-        tv_title.setText(title);    //재료를 title로로
+
+        tv_title.setText(title);
 
 
    }
@@ -60,15 +57,17 @@ public class RecipeActivity extends FragmentActivity implements CircleTimer.OnTi
 
     @Override
     public void completeTimer() {
-        Log.d(TAG, "timer complete");
         int currentIdx = mViewPager.getCurrentItem();
-
-        if (currentIdx < NUM_PAGES) {
-            mViewPager.setCurrentItem(currentIdx);
-
+        if (currentIdx < NUM_PAGES - 1) {
+            Log.d(TAG, "timer complete" + currentIdx);
+            currentIdx++;
+            mViewPager.setCurrentItem(currentIdx, true);
+            indicator.setCurrentStep(currentIdx);
         }
         // next fragment 이동.
     }
+
+
     private class PagerAdapter extends FragmentStatePagerAdapter {
 
         public PagerAdapter(FragmentManager fm) {
@@ -83,7 +82,7 @@ public class RecipeActivity extends FragmentActivity implements CircleTimer.OnTi
 
         @Override
         public int getCount() {
-            return 5;  // 총 5개의 page를 보여줍니다.
+            return NUM_PAGES;  // 총 5개의 page를 보여줍니다.
         }
 
     }
