@@ -1,2 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_006cb6e5055a89be4da96bc8d7ce37e6bb32070a.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_b70732b86dbbd786d27498c5af37763e3a759896.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9_ab410bb73e3d8ee9ba296501915823040ef6579d.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="5640136cf422060a7077e2c02d9a231d7c76f959">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.afollestad.material-dialogs-core-0.8.6.1_50d29013721e797432218b8c65a92f2750bc0b72.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/K-hackathon/ChipBubbleText/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ee77d81996683a58c7fd942080d05dd28b8084c4">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/K-hackathon-ChipBubbleText-unspecified_a9c5c68eea4fc581d38e4caa748a44da6a1da7a2.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0_9d9f8432906a8fbb550fd4c312bec34ab773172b.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0_d1d6979f6d671d2e1bab3a038623a903390a5e89.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="8dd49930e4f9dde1a42d37e362b9fea8b1b69c0d">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.0.0_5f42a9d136baf3d7bf282f96bcb2fcefca8efa58.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/okio-1.8.0_5b9262c46d74549fa811b4ce4c0e81b7f43fdcc0.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0_66e3a8f6a532238e37fc89129e27ee8e4cfe345e.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.6/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ab3193b438e37f7b0a634cc2dfebbf92892ea90c">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/me.zhanghai.android.materialprogressbar-library-1.1.6_30dc314fb4e10976ff4308b49d66db2997ba1631.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0_62bcf39130bd5ae380374ac40a5568d2599f37ff.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0_39a8a847f1742a5810ed4c22124dd22c4505c013.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_c4ff2f85315a9c8ee4fe596286d1b1fdc66d62a5.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/okhttp-3.3.1_610e226b65718fe634454b86944f8ac01770a5bc.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/exploded-aar/com.github.CardinalNow/Android-CircleProgressIndicator/v0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d3eb8991496fac8df6e77946e2856c1faab6b891">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/com.github.CardinalNow-Android-CircleProgressIndicator-v0.2_e4ee30e6a3d64378eadfd12fa4018c5305674778.jar" />
+    </item>
+    <item
+        jar="/Users/IronFactory/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Users/IronFactory/k-hackathone/K-hackathon/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6_a24d6a8fb21e01548e71da71a43c770910d3a58f.jar" />
+    </item>
+
+</items>

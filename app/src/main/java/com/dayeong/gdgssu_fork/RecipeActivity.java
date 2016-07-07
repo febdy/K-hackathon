@@ -10,8 +10,8 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
 import github.chenupt.springindicator.SpringIndicator;
+import com.dayeong.gdgssu_fork.utils.Global;
 
 public class RecipeActivity extends FragmentActivity {
     //
@@ -63,7 +63,6 @@ public class RecipeActivity extends FragmentActivity {
 
     public void receiveIntentData() {
         Intent intent = getIntent();
-        title = intent.getStringExtra("title");
-
+        title = intent.getStringExtra(Global.TITLE);
     }
 }

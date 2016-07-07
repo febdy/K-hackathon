@@ -1,6 +1,8 @@
 package com.dayeong.gdgssu_fork.signup;
 
 import com.dayeong.gdgssu_fork.dao.User;
+import com.dayeong.gdgssu_fork.network.HttpListener;
+import com.dayeong.gdgssu_fork.network.HttpManager;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.utils.ValidUtils;
 
@@ -36,8 +38,20 @@ public class SignupPresenter implements SignupContract.UserActionListener {
             listener.signUpValid(Global.ERR_EMPTY_EMAIL);
         else if (!validUtils.checkEmail(email))
             listener.signUpValid(Global.ERR_INVALID_EMAIL);
-        else
-            listener.signUp(new User(id, pw, email));
+        else {
+            listener.signUpValid(Global.SUCCESS);
+            HttpManager.signUp(new User(id, pw, email), new HttpListener.OnSignUpListener() {
+                @Override
+                public void onSuccess() {
+                    listener.signUpSuccess();
+                }
+
+                @Override
+                public void onException() {
+                    listener.signUpFail();
+                }
+            });
+        }
     }
 
 

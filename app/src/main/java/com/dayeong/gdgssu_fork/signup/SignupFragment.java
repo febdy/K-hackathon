@@ -11,13 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.dayeong.gdgssu_fork.R;
-import com.dayeong.gdgssu_fork.dao.User;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-
-import cz.msebera.android.httpclient.Header;
 
 /**
  * 회원가입
@@ -102,27 +97,22 @@ public class SignupFragment extends BaseFragment implements SignupContract.View 
             emailInput.setError(getString(R.string.err_empty_email));
         else if (code == Global.ERR_INVALID_EMAIL)
             emailInput.setError(getString(R.string.err_invalid_email));
+        else
+            showDialog(getString(R.string.action_signup), getString(R.string.prompt_wait));
     }
 
 
     @Override
-    public void signUp(User user) {
-        showDialog(getString(R.string.action_signup), getString(R.string.prompt_wait));
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.post(Global.SIGN_UP_URL, user.getRequestParams(), new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                Log.d(TAG, "회원가입 성공");
-                dismissDialog();
-                getActivity().getSupportFragmentManager().popBackStack();
-            }
+    public void signUpSuccess() {
+        Log.d(TAG, "회원가입 성공");
+        dismissDialog();
+        getActivity().getSupportFragmentManager().popBackStack();
+    }
 
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                Log.d(TAG, "회원가입 실패");
-                dismissDialog();
-                Snackbar.make(layout, getString(R.string.fail_to_sign_up), Snackbar.LENGTH_SHORT).show();
-            }
-        });
+    @Override
+    public void signUpFail() {
+        Log.d(TAG, "회원가입 실패");
+        dismissDialog();
+        Snackbar.make(layout, getString(R.string.fail_to_sign_up), Snackbar.LENGTH_SHORT).show();
     }
 }
