@@ -1,119 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <items version="2" >
 
     <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Dayeong\AndroidStudioProjects\gdgssu_fork\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         revision="24.0.0"
-        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0_4d65bde6ccb168abac6c6004ac626c749b596c21.jar" />
+        sha1="659dd19e85778cb326bb04fcd190a3aa1c46d922">
+        <dex dex="C:\Users\Dayeong\AndroidStudioProjects\gdgssu_fork\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b15056194d994048742b9e1bf4943e0505f13de5\classes.dex" />
     </item>
     <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="false"
+        jar="C:\Users\Dayeong\AndroidStudioProjects\gdgssu_fork\app\build\intermediates\exploded-aar\com.github.badoualy\stepper-indicator\1.0.2\jars\classes.jar"
+        jumboMode="true"
         revision="24.0.0"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_4e38d50465486008924c00abbb721167ad4d5eea.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.6/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="ab3193b438e37f7b0a634cc2dfebbf92892ea90c">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/me.zhanghai.android.materialprogressbar-library-1.1.6_10a55df66d39a3c30c1e3f2b0ca00e6375c3ecf4.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0_e8ec93ce10a28e66015c3f5144175c5760ccf992.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="8dd49930e4f9dde1a42d37e362b9fea8b1b69c0d">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.0.0_d1c410513d42bf332e1dd940704600f244d059b3.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0_ef3a162e15ca33e934508665ee261995a4e2fe5e.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6_c61f722e2768880044036e4dd064e4fd0a8f2cbd.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_b9b7f51e6960d6dbcd45d9c9226265f52cdd19f4.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0_02ef0c2c6a506ea0400d43d43985f639985a79fb.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0_192f61f75e6c12958056f5997f74f2a9c2a2ab5a.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="5640136cf422060a7077e2c02d9a231d7c76f959">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.afollestad.material-dialogs-core-0.8.6.1_dd71994ea436a20d9a5ec04b0d02949588622c27.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/okio-1.8.0_be0c6a7f1148d049fdb780cb0c85c6c5adcb0208.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_fa9ef0a44b3187dca4506da0833046883e77dae7.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9_a2871a0e1245fb44690e0497666c3c8dd11f31b1.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/K-hackathon/app/build/intermediates/exploded-aar/com.github.CardinalNow/Android-CircleProgressIndicator/v0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="d3eb8991496fac8df6e77946e2856c1faab6b891">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/com.github.CardinalNow-Android-CircleProgressIndicator-v0.2_440c19c930f218395530ed2b2bb38b4089210670.jar" />
-    </item>
-    <item
-        jar="/Users/Hyemingway/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"
-        jumboMode="false"
-        revision="24.0.0"
-        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
-        <dex dex="/Users/Hyemingway/K-hackathon/app/build/intermediates/pre-dexed/debug/okhttp-3.3.1_2fa29b576f2fa5b5a3ece803807584a1ca2b8b3b.jar" />
+        sha1="97d03108af4f3802cf02e218fa9aff3cff78f730">
+        <dex dex="C:\Users\Dayeong\AndroidStudioProjects\gdgssu_fork\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.badoualy-stepper-indicator-1.0.2_9f1f2a5b9c496ff6a5cc5fd96241f3c31f428e64\classes.dex" />
     </item>
 
 </items>
-
