@@ -53,7 +53,7 @@ public class TimerFragment extends BaseFragment {
     @Override
     protected void init(View view) {
         circleTimerView = (CircleTimer) view.findViewById(R.id.fragment_timer_circle_timer);
-        circleTimerView.setMaxTime((int) timer.getTime());
+        circleTimerView.setMaxTime(10);
         circleTimerView.setCurrentTime(0);
     }
 }

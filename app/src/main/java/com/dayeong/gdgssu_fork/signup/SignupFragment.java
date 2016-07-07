@@ -109,7 +109,7 @@ public class SignupFragment extends BaseFragment implements SignupContract.View 
     public void signUp(User user) {
         showDialog(getString(R.string.action_signup), getString(R.string.prompt_wait));
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post(Global.SIGNUP_URL, user.getRequestParams(), new AsyncHttpResponseHandler() {
+        client.post(Global.SIGN_UP_URL, user.getRequestParams(), new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 Log.d(TAG, "회원가입 성공");

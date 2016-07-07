@@ -34,6 +34,8 @@ public class CircleTimer extends RelativeLayout {
     private boolean isRun = true;
     private Handler handler = new Handler();
 
+    private OnTimerListener listener;
+
     private Thread timerThread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -47,6 +49,8 @@ public class CircleTimer extends RelativeLayout {
                         public void run() {
                             setTimeText(currentTime);
                             progressBar.setProgress(currentTime++);
+                            if (currentTime == maxTime)
+                                listener.completeTimer();
                         }
                     });
                 }
@@ -58,20 +62,20 @@ public class CircleTimer extends RelativeLayout {
 
     public CircleTimer(Context context) {
         super(context);
-        init();
+        init(context);
     }
 
     public CircleTimer(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context);
     }
 
     public CircleTimer(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context);
     }
 
-    private void init() {
+    private void init(Context context) {
         inflate(getContext(), R.layout.circle_timer, this);
 
         titleText = (TextView) findViewById(R.id.circle_timer_title);
@@ -86,6 +90,7 @@ public class CircleTimer extends RelativeLayout {
 
         setListener();
         timerThread.start();
+        listener = (OnTimerListener) context;
     }
 
     public void setTitle(String title) {
@@ -160,5 +165,10 @@ public class CircleTimer extends RelativeLayout {
                 currentTime = 0;
             }
         });
+    }
+
+
+    public interface OnTimerListener {
+        void completeTimer();
     }
 }
