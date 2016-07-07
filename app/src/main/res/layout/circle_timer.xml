@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/circle_timer_max_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin" />
+
+    <TextView
+        android:id="@+id/circle_timer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/circle_timer_max_time"/>
+
+    <TextView
+        android:id="@+id/circle_timer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/circle_timer_max_time"/>
+
+
+    <ProgressBar
+        android:id="@+id/circle_timer_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:max="100"
+        android:rotation="-90"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/circle_progress_foreground"/>
+
+
+    <Button
+        android:id="@+id/circle_timer_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reset"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/circle_timer_time"
+        android:layout_marginTop="@dimen/timer_button_margin"/>
+
+    <Button
+        android:id="@+id/circle_timer_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_start"
+        android:layout_toRightOf="@id/circle_timer_reset"
+        android:layout_alignBottom="@id/circle_timer_reset"/>
+
+    <Button
+        android:id="@+id/circle_timer_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_stop"
+        android:layout_toLeftOf="@id/circle_timer_reset"
+        android:layout_alignBottom="@id/circle_timer_reset"/>
+    
+
+</RelativeLayout>

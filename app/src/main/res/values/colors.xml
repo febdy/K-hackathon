@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="circleProgressCompleteStartGradient">#FF0000</color>
+    <color name="circleProgressCompleteEndGradient">#FFF000</color>
+    <color name="circleProgressIncompleteStartGradient">#888888</color>
+    <color name="circleProgressIncompleteEndGradient">#888888</color>
 </resources>

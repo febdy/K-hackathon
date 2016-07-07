@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dayeong.gdgssu_fork.timer.TimerFragment">
+
+    <com.dayeong.gdgssu_fork.views.CircleTimer
+        android:id="@+id/fragment_timer_circle_timer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
