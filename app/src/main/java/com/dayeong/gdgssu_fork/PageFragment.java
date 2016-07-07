@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.dayeong.gdgssu_fork.views.CircleTimer;
+
 /**
  * Created by Hyemingway on 2016. 7. 4..
  */
-public class PageFragment extends Fragment {
+public class PageFragment extends Fragment implements CircleTimer.OnTimerListener{
 
     private int mPageNumber;
 
@@ -19,6 +21,7 @@ public class PageFragment extends Fragment {
         Bundle args = new Bundle();
         args.putInt("page", pageNumber);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -26,6 +29,7 @@ public class PageFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPageNumber = getArguments().getInt("page");
+        create(mPageNumber);
     }
 
     @Override
@@ -33,6 +37,12 @@ public class PageFragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_page, container, false);
         ((TextView) rootView.findViewById(R.id.number)).setText(mPageNumber + "");
+
         return rootView;
+    }
+
+    @Override
+    public void completeTimer() {
+        // next fragment 이동.
     }
 }
