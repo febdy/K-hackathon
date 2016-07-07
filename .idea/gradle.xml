@@ -8,10 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-<<<<<<< HEAD
-=======
             <option value="$PROJECT_DIR$/ChipBubbleText" />
->>>>>>> master
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
