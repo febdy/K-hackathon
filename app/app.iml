@@ -134,5 +134,6 @@
     <orderEntry type="library" exported="" name="cardview-v7-24.0.0" level="project" />
     <orderEntry type="library" exported="" name="Android-CircleProgressIndicator-v0.2" level="project" />
     <orderEntry type="library" exported="" name="android-async-http-1.4.9" level="project" />
+    <orderEntry type="module" module-name="ChipBubbleText" exported="" />
   </component>
 </module>
