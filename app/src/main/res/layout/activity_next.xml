@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -25,17 +26,11 @@
         android:layout_height="400dp"
         android:layout_weight="0.5"/>
 
-    <github.chenupt.springindicator.SpringIndicator
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:siTextSize="18sp"
-        app:siIndicatorColors="@color/colorAccent"
-        app:siTextColor="@color/colorPrimaryDark"
-        app:siSelectedTextColor="@android:color/white"
-        app:siIndicatorColor="@color/colorPrimary"
-        android:id="@+id/indicator"
+    <com.badoualy.stepperindicator.StepperIndicator
         android:layout_width="match_parent"
-        android:layout_height="56dp"/>
-
+        android:layout_height="wrap_content"
+        app:stpi_stepCount="5"
+        android:id="@+id/indicator"/>
     
 
 </LinearLayout>

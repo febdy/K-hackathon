@@ -6,11 +6,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-import github.chenupt.springindicator.SpringIndicator;
+
+import com.badoualy.stepperindicator.StepperIndicator;
 import com.dayeong.gdgssu_fork.utils.Global;
 
 public class RecipeActivity extends FragmentActivity {
@@ -20,19 +19,30 @@ public class RecipeActivity extends FragmentActivity {
 
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
-    private SpringIndicator mSpringIndicator;
+    private StepperIndicator indicator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
 
-        setLayout();
-        receiveIntentData();
-        tv_title.setText(title);
+        tv_title = (TextView) findViewById(R.id.tv_title);
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        indicator = (StepperIndicator) findViewById(R.id.indicator);
 
         mPagerAdapter = new PagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
+
+
+        indicator.setViewPager(mViewPager);
+
+        indicator.setStepCount(5);
+//        indicator.setCurrentStep(2);
+
+        receiveIntentData();
+        tv_title.setText(title);
+
 
     }
 
@@ -53,12 +63,6 @@ public class RecipeActivity extends FragmentActivity {
             return 5;  // 총 5개의 page를 보여줍니다.
         }
 
-    }
-    public void setLayout() {
-        tv_title = (TextView) findViewById(R.id.tv_title);
-        mSpringIndicator = (SpringIndicator) findViewById(R.id.indicator);
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-        mSpringIndicator.setViewPager(mViewPager);
     }
 
     public void receiveIntentData() {

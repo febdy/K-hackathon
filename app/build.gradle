@@ -32,5 +32,5 @@ dependencies {
     compile 'com.android.support:support-v4:24.0.0'
     compile 'com.afollestad.material-dialogs:core:0.8.6.1'
     compile 'com.github.CardinalNow:Android-CircleProgressIndicator:v0.2'
-    compile 'com.github.chenupt.android:springindicator:1.0.2@aar'
+    compile 'com.github.badoualy:stepper-indicator:1.0.2'
 }
