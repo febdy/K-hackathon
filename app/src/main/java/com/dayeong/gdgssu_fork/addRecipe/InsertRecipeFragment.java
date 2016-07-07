@@ -155,7 +155,7 @@ public class InsertRecipeFragment extends BaseFragment implements InsertRecipeCo
         client.post(Global.INSERT_RECIPE_URL, recipeGeneral.getRequestParams(), new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                
+
             }
 
             @Override
