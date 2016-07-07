@@ -27,7 +27,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RecipeActivity" />
-        <activity android:name=".simpleTimer.SimpleTimerActivity"></activity>
-        <activity android:name=".timer.TimerActivity"></activity>
+        <activity android:name=".simpleTimer.SimpleTimerActivity" />
+        <activity android:name=".timer.TimerActivity" />
+        <activity android:name=".addRecipe.InsertRecipeActivity">
+        </activity>
     </application>
 </manifest>

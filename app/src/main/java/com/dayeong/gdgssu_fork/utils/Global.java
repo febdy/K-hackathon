@@ -8,6 +8,7 @@ public class Global {
     public static final String SERVER_URL = "http://k-hack-server.herokuapp.com";
     public static final String SIGN_UP_URL = SERVER_URL + "/signup";
     public static final String LOGIN_URL = SERVER_URL + "/login";
+    public static final String INSERT_RECIPE_URL = SERVER_URL + "/insertRecipe";
 
 
     public static final int ERR_EMPTY_ID = 0;
@@ -26,11 +27,16 @@ public class Global {
     public static final String ID = "id";
     public static final String PW = "pw";
     public static final String EMAIL = "email";
+    public static final String NAME = "name";
+    public static final String AUTHOR = "author";
 
 
     // intent key
     public static final String USER = "user";
     public static final String TIMER = "timer";
+    public static final String TITLE = "title";
+    public static final String RECIPE_GENERAL = "recipeGeneral";
+    public static final String RECIPE_STEPS = "recipeSteps";
 
     // db key
     public static final String SIMPLE_TIMER_DB = "simpleTimer";
