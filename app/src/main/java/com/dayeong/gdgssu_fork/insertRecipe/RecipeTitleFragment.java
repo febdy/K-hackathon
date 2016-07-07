@@ -1,4 +1,4 @@
-package com.dayeong.gdgssu_fork.addRecipe;
+package com.dayeong.gdgssu_fork.insertRecipe;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

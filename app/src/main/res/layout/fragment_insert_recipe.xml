@@ -93,15 +93,17 @@
 
         <Button
             android:id="@+id/fragment_insert_recipe_submit"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/action_submit"/>
 
 
         <Button
-            android:id="@+id/fragment_insert_recipe_next"
-            android:layout_width="match_parent"
+            android:id="@+id/fragment_insert_recipe_more"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/action_more"/>
 
     </LinearLayout>

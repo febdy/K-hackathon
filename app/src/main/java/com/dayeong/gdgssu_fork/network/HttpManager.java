@@ -2,6 +2,7 @@ package com.dayeong.gdgssu_fork.network;
 
 import android.util.Log;
 
+import com.dayeong.gdgssu_fork.dao.RecipeGeneral;
 import com.dayeong.gdgssu_fork.dao.User;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.loopj.android.http.AsyncHttpClient;
@@ -71,4 +72,29 @@ public class HttpManager {
         });
     }
 
+
+    public static void insertRecipe(RecipeGeneral recipeGeneral, final HttpListener.OnInsertRecipe onInsertRecipe) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.post(Global.INSERT_RECIPE_URL, recipeGeneral.getRequestParams(), new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+                    boolean isSuccess = response.getBoolean("status");
+                    if (isSuccess)
+                        onInsertRecipe.onSuccess();
+                    else
+                        onInsertRecipe.onException();
+                } catch (JSONException e) {
+                    onInsertRecipe.onException();
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                onInsertRecipe.onException();
+                Log.d(TAG, "실패 = " + responseString);
+            }
+        });
+    }
 }

@@ -1,4 +1,4 @@
-package com.dayeong.gdgssu_fork.addRecipe;
+package com.dayeong.gdgssu_fork.insertRecipe;
 
 import com.dayeong.gdgssu_fork.dao.RecipeGeneral;
 import com.dayeong.gdgssu_fork.dao.RecipeStep;

@@ -1,7 +1,9 @@
-package com.dayeong.gdgssu_fork.addRecipe;
+package com.dayeong.gdgssu_fork.insertRecipe;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +14,10 @@ import android.widget.NumberPicker;
 import com.dayeong.gdgssu_fork.R;
 import com.dayeong.gdgssu_fork.dao.RecipeGeneral;
 import com.dayeong.gdgssu_fork.dao.RecipeStep;
+import com.dayeong.gdgssu_fork.network.HttpListener;
+import com.dayeong.gdgssu_fork.network.HttpManager;
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-
-import cz.msebera.android.httpclient.Header;
 
 /**
  * 레시피 추가
@@ -92,6 +92,9 @@ public class InsertRecipeFragment extends BaseFragment implements InsertRecipeCo
         secPicker.setMinValue(0);
         secPicker.setWrapSelectorWheel(true);
 
+        submitBtn = (Button) view.findViewById(R.id.fragment_insert_recipe_submit);
+        moreBtn = (Button) view.findViewById(R.id.fragment_insert_recipe_more);
+
         setListener();
     }
 
@@ -150,17 +153,19 @@ public class InsertRecipeFragment extends BaseFragment implements InsertRecipeCo
     }
 
     @Override
-    public void insertRecipe(RecipeGeneral recipeGeneral) {
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.post(Global.INSERT_RECIPE_URL, recipeGeneral.getRequestParams(), new AsyncHttpResponseHandler() {
+    public void insertRecipe(final RecipeGeneral recipeGeneral) {
+        HttpManager.insertRecipe(recipeGeneral, new HttpListener.OnInsertRecipe() {
             @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
+            public void onSuccess() {
+                Log.d(TAG, "레시피 삽입 성공");
+                getActivity().finish();
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
+            public void onException() {
+                Log.d(TAG, "레시피 삽입 실패");
+                recipeGeneral.getRecipeSteps().remove(recipeGeneral.getRecipeSteps().size() - 1);
+                Snackbar.make(getView(), "레시피 삽입에 실패하였습니다", Snackbar.LENGTH_SHORT).show();
             }
         });
     }

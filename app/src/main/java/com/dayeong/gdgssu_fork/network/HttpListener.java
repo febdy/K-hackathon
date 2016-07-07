@@ -15,4 +15,9 @@ public class HttpListener {
         void onException();
     }
 
+    public interface OnInsertRecipe {
+        void onSuccess();
+        void onException();
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.dayeong.gdgssu_fork.dao;
 
+import android.util.Log;
+
 import com.dayeong.gdgssu_fork.utils.Global;
 import com.loopj.android.http.RequestParams;
 
@@ -69,13 +71,14 @@ public class RecipeGeneral implements Serializable {
 
     public RequestParams getRequestParams() {
         RequestParams params = new RequestParams();
-        params.put(Global.NAME, name);
+        params.put(Global.RECIPE_NAME, name);
         params.put(Global.AUTHOR, author);
         JSONArray array = new JSONArray();
         for (RecipeStep step : recipeSteps) {
             array.put(step.toJson());
         }
-        params.put(Global.RECIPE_STEPS, recipeSteps);
+        params.put(Global.RECIPE_STEPS, array);
+        Log.d("ttt", params.toString());
         return params;
     }
 }

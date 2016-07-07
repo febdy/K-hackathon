@@ -15,7 +15,7 @@ public class RecipeStep implements Parcelable {
     private static final String PROPERTY_ID = "id";
     private static final String PROPERTY_STEP = "step";
     private static final String PROPERTY_INGREDIENT = "ingredient";
-    private static final String PROPERTY_INGREDIENT_AMOUNT = "ingredientAmount";
+    private static final String PROPERTY_INGREDIENT_AMOUNT = "ingredient_amount";
     private static final String PROPERTY_TIME = "time";
     private static final String PROPERTY_ACTION = "action";
 
@@ -125,7 +125,6 @@ public class RecipeStep implements Parcelable {
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put(PROPERTY_ID, id);
             jsonObject.put(PROPERTY_STEP, step);
             jsonObject.put(PROPERTY_INGREDIENT, ingredient);
             jsonObject.put(PROPERTY_INGREDIENT_AMOUNT, ingredientAmount);
