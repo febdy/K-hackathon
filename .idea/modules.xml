@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/K-hackathon.iml" filepath="$PROJECT_DIR$/K-hackathon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChipBubbleText/ChipBubbleText.iml" filepath="$PROJECT_DIR$/ChipBubbleText/ChipBubbleText.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gdgssu_fork.iml" filepath="$PROJECT_DIR$/gdgssu_fork.iml" />
     </modules>
   </component>
 </project>
