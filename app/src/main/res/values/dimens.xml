@@ -7,6 +7,8 @@
 
     <dimen name="small_margin">8dp</dimen>
 
-    <dimen name="circleProgressRadius">60dp</dimen>
+    <dimen name="circleProgressRadius">90dp</dimen>
     <dimen name="circleProgressThickness">7dp</dimen>
+
+    <dimen name="timer_button_margin">60dp</dimen>
 </resources>

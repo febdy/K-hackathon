@@ -44,7 +44,8 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_reset"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/circle_timer_time"/>
+        android:layout_below="@id/circle_timer_time"
+        android:layout_marginTop="@dimen/timer_button_margin"/>
 
     <Button
         android:id="@+id/circle_timer_start"

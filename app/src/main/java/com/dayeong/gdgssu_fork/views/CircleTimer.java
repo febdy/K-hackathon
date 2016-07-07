@@ -40,7 +40,7 @@ public class CircleTimer extends RelativeLayout {
             try {
                 while (true) {
                     Thread.sleep(1000);
-                    if (!isRun || currentTime >= maxTime)
+                    if (!isRun || currentTime > maxTime)
                         continue;
                     handler.post(new Runnable() {
                         @Override
