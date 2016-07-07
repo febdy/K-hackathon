@@ -39,4 +39,7 @@
     <string name="btn_stop">정지</string>
     <string name="btn_reset">초기화</string>
 
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+
 </resources>

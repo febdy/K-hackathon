@@ -9,18 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="#ffd1ff"
         android:text="default"
         android:textAlignment="center"
-        android:textSize="30dp"
-        android:background="#ffd1ff"
-        />
+        android:textSize="30dp" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:background="#ffff84"
         android:layout_width="wrap_content"
-        android:layout_height="500dp" />
+        android:layout_height="500dp"
+        android:background="#ffff84" />
 
-    
 
 </LinearLayout>

@@ -7,6 +7,6 @@
     <com.dayeong.gdgssu_fork.views.CircleTimer
         android:id="@+id/fragment_timer_circle_timer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </FrameLayout>
