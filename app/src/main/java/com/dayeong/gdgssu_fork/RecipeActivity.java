@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class NextActivity extends AppCompatActivity {
+public class RecipeActivity extends AppCompatActivity {
+    //
 
     TextView tv_title;
     String title;
@@ -14,13 +15,14 @@ public class NextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
-        init();
+        setLayout();
         receiveIntentData();
 
         tv_title.setText(title);
+
     }
 
-    public void init() {
+    public void setLayout() {
         tv_title = (TextView) findViewById(R.id.tv_title);
     }
 
