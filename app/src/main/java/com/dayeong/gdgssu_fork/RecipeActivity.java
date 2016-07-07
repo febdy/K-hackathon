@@ -11,6 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import github.chenupt.springindicator.SpringIndicator;
+
 public class RecipeActivity extends FragmentActivity {
     //
     private TextView tv_title;
@@ -18,11 +20,13 @@ public class RecipeActivity extends FragmentActivity {
 
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
+    private SpringIndicator mSpringIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
+
         setLayout();
         receiveIntentData();
         tv_title.setText(title);
@@ -52,7 +56,9 @@ public class RecipeActivity extends FragmentActivity {
     }
     public void setLayout() {
         tv_title = (TextView) findViewById(R.id.tv_title);
+        mSpringIndicator = (SpringIndicator) findViewById(R.id.indicator);
         mViewPager = (ViewPager) findViewById(R.id.pager);
+        mSpringIndicator.setViewPager(mViewPager);
     }
 
     public void receiveIntentData() {

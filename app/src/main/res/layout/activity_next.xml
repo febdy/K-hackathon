@@ -2,24 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="default"
+        android:text="Recipe Title"
         android:textAlignment="center"
         android:textSize="30dp"
+        android:layout_margin="10dp"
         android:background="#ffd1ff"
+        android:layout_weight="0.2"
         />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:background="#ffff84"
         android:layout_width="wrap_content"
-        android:layout_height="500dp" />
+        android:layout_height="400dp"
+        android:layout_weight="0.5"/>
+
+    <github.chenupt.springindicator.SpringIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:siTextSize="18sp"
+        app:siIndicatorColors="@color/colorAccent"
+        app:siTextColor="@color/colorPrimaryDark"
+        app:siSelectedTextColor="@android:color/white"
+        app:siIndicatorColor="@color/colorPrimary"
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"/>
 
     
 

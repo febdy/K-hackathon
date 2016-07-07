@@ -29,14 +29,13 @@ public class PageFragment extends Fragment implements CircleTimer.OnTimerListene
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPageNumber = getArguments().getInt("page");
-        create(mPageNumber);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_page, container, false);
-        ((TextView) rootView.findViewById(R.id.number)).setText(mPageNumber + "");
+        ((TextView) rootView.findViewById(R.id.number)).setText("no."+mPageNumber);
 
         return rootView;
     }

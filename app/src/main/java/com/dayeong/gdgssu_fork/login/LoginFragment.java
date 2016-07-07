@@ -62,25 +62,16 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-
+                listener.login(idInput.getText().toString(), pwInput.getText().toString());
             }
         });
-//        submitBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                listener.login(idInput.getText().toString(), pwInput.getText().toString());
-//            }
-//        });
-//
-//        signupBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                listener.signup();
-//            }
-//        });
+
+        signupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.signup();
+            }
+        });
     }
 
     @Override
