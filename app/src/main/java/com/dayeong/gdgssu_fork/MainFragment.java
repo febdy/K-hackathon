@@ -6,9 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.MultiAutoCompleteTextView;
 
-import com.aml.androidchipbubbletext.ChipBubbleText;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
 
 import java.util.ArrayList;
@@ -22,7 +20,6 @@ public class MainFragment extends BaseFragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,12 +31,6 @@ public class MainFragment extends BaseFragment {
 
     @Override
     protected void init(View view) {
-        String[] list = {"감자", "고구마", "호박고구마", "오이", "당근", "양파", "마늘"};
-
-        MultiAutoCompleteTextView autoTextView = (MultiAutoCompleteTextView) view.findViewById(R.id.auto_TextView);
-        ChipBubbleText cp = new ChipBubbleText(getActivity(), autoTextView, list, 1);
-        cp.initialize();
-
         mLayoutManager = new LinearLayoutManager(getActivity());
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);

@@ -19,8 +19,8 @@ import com.dayeong.gdgssu_fork.utils.Global;
 import com.dayeong.gdgssu_fork.views.BaseFragment;
 
 /**
-* 로그인
-* */
+ * 로그인
+ */
 public class LoginFragment extends BaseFragment implements LoginContract.View {
 
     private static final String TAG = "LoginFragment";
@@ -62,7 +62,10 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.login(idInput.getText().toString(), pwInput.getText().toString());
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+                // listener.login(idInput.getText().toString(), pwInput.getText().toString());
             }
         });
 
