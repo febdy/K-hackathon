@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.MultiAutoCompleteTextView;
+
+import com.aml.androidchipbubbletext.ChipBubbleText;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -26,15 +29,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
+                this, drawer, toolbar,  R.string.drawer_open, R.string.drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //검색
+        String[] list = {"감자", "고구마", "호박고구마", "오이", "당근", "양파", "마늘"};
+
+        MultiAutoCompleteTextView autoTextView = (MultiAutoCompleteTextView)findViewById(R.id.auto_TextView);
+        ChipBubbleText cp = new ChipBubbleText(this, autoTextView, list, 1);
+        cp.initialize();
+
     }
 
     @Override
@@ -54,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    @Override
+/*    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -66,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    } */
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
